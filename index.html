@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cinemania - HomePage" />
+    <title>Cinemania - HomePage</title>
+    <link rel="icon" type="image/svg+xml" href="/cinemania/assets/favicon-dQDw4BO6.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/cinemania/index.js"></script>
+    <link rel="modulepreload" crossorigin href="/cinemania/assets/modulepreload-polyfill-B5Qt9EMX.js">
+    <link rel="modulepreload" crossorigin href="/cinemania/assets/vendor-Cv0FVZ7t.js">
+    <link rel="stylesheet" crossorigin href="/cinemania/assets/index-DXWC0qDP.css">
+  </head>
+  <body>
+    <section class="hero">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo">
+            <a href="/cinemania/" title="btn" class="homepage-btn">
+              <svg class="homepage-svg">
+                <use href="/cinemania/assets/icons-DJIxEwpF.svg#homepage-logo"></use>
+              </svg>
+            </a>
+            <span class="home-text">Cinemania</span>
+          </div>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links">
+            <li><a class="active" href="/cinemania/">HOME</a></li>
+            <li><a href="/cinemania/catalog.html">CATALOG</a></li>
+            <li><a href="/cinemania/library.html">MY LIBRARY</a></li>
+          </ul>
+          <div class="nav-theme">
+            <input title="checkbox" type="checkbox" id="theme-switch" />
+            <label for="theme-switch" class="toggle-label">
+              <svg class="icon moon" width="15" height="15">
+                <use href="/cinemania/assets/icons-DJIxEwpF.svg#icon-moon"></use>
+              </svg>
+              <svg class="icon sun" width="16" height="16">
+                <use href="/cinemania/assets/icons-DJIxEwpF.svg#icon-sun"></use>
+              </svg>
+              <span class="ball">
+                <svg width="18" height="18">
+                  <use href="/cinemania/assets/icons-DJIxEwpF.svg#icon-ball"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+        </nav>
+      </header>
+      <div class="hero-content default-hero">
+        <h1>Let's Make Your Own Cinema</h1>
+        <p>
+          Is a guide to creating a personalized movie theater experience. You'll
+          need a projector, screen, and speakers. Decorate your space, choose
+          your films, and stock up on snacks for the full experience.
+        </p>
+        <button type="button" class="hero-content-btn">
+          <span>Get Started</span>
+        </button>
+      </div>
+      <div class="hero-content movie-hero" style="display: none">
+
+      </div>
+    </section>
+
+    <section class="weekly-trends-container">
+      <div class="weekly-trends-header">
+        <h2 class="weekly-trends-title">WEEKLY TRENDS</h2>
+        <a href="/cinemania/catalog.html" class="see-all-link">See All</a>
+      </div>
+      <div class="weekly-movie-grid">
+        <button  title="btn" class="slider-button prev">
+          <i class="fas fa-chevron-left"></i>
+        </button>
+        <ul class="weekly-movie-list">
+        </ul>
+        <button title="btn" class="slider-button next">
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </section>
+
+    <section class="upcoming-movies-container">
+      <div class="upcoming-movies-header">
+        <h2 class="upcoming-movies-title">UPCOMING THIS MONTH</h2>
+      </div>
+      <div class="upcoming-movies-grid">
+        <ul class="upcoming-movies-list">
+
+        </ul>
+      </div>
+    </section>
+
+    <section class="click-film-hero">
+      <div class="click-film-hero-content"></div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="copyright">
+          <span>&copy;</span>
+          <span>2025</span>
+        </div>
+        <span class="separator">|</span>
+        <span>All Rights Reserved</span>
+      </div>
+    </footer>
+
+    <div class="modal" id="movieDetailsModal">
+      <div class="modal-content">
+        <button title="btn" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="modal-body">
+          <div class="modal-header">
+            <h2 class="modal-title"></h2>
+            <div class="modal-rating"></div>
+          </div>
+          <div class="modal-info">
+            <div class="modal-genres"></div>
+            <div class="modal-release-date"></div>
+            <div class="modal-runtime"></div>
+            <div class="modal-budget"></div>
+            <div class="modal-revenue"></div>
+          </div>
+          <div class="modal-overview">
+            <h3>Overview</h3>
+            <p></p>
+          </div>
+          <div class="modal-cast">
+            <h3>Cast</h3>
+            <div class="cast-list"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="videoModal">
+      <div class="modal-content video-modal">
+        <button title="btn" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="video-container">
+          <iframe title="frame" id="videoFrame" frameborder="0" allowfullscreen></iframe>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal" id="errorModal">
+      <div class="modal-content error-modal">
+        <button title="btn" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="error-content">
+          <i class="fas fa-exclamation-circle"></i>
+          <h3>Oops!</h3>
+          <p class="error-message"></p>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
