@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cinemania - My Library" />
+    <title>Cinemania - My Library</title>
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/library.css" />
+  </head>
+  <body>
+    <section class="hero">
+      <header class="header">
+        <nav class="nav">
+          <div class="logo">
+            <a href="/cinemania/" title="btn" class="homepage-btn">
+              <svg class="homepage-svg">
+                <use href="assets/icons/icons.svg#homepage-logo"></use>
+              </svg>
+            </a>
+            <span class="home-text">Cinemania</span>
+          </div>
+          <div class="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links">
+            <li><a href="/cinemania/">HOME</a></li>
+            <li><a href="/cinemania/catalog.html">CATALOG</a></li>
+            <li>
+              <a class="active" href="/cinemania/library.html">MY LIBRARY</a>
+            </li>
+          </ul>
+          <div class="nav-theme">
+            <input title="switch" type="checkbox" id="theme-switch" />
+            <label for="theme-switch" class="toggle-label">
+              <svg class="icon moon" width="15" height="15">
+                <use href="assets/icons/icons.svg#icon-moon"></use>
+              </svg>
+              <svg class="icon sun" width="16" height="16">
+                <use href="assets/icons/icons.svg#icon-sun"></use>
+              </svg>
+              <span class="ball">
+                <svg width="18" height="18">
+                  <use href="assets/icons/icons.svg#icon-ball"></use>
+                </svg>
+              </span>
+            </label>
+          </div>
+        </nav>
+      </header>
+      <div class="hero-content default-hero">
+        <h1>Create Your Dream Cinema</h1>
+        <p>
+          Is a guide to designing a personalized movie theater experience with
+          the right equipment, customized decor, and favorite films. This guide
+          helps you bring the cinema experience into your own home with cozy
+          seating, dim lighting, and movie theater snacks.
+        </p>
+      </div>
+      <div class="hero-content movie-hero" style="display: none">
+
+      </div>
+    </section>
+
+    <section class="weekly-trends-container library-container">
+      <div class="movie-genre-container">
+        <select title="select" class="genre-select">
+          <option value="">Genre</option>
+          <option value="Family">Family</option>
+          <option value="Animation">Animation</option>
+          <option value="Science Fiction">Science Fiction</option>
+          <option value="Thriller">Thriller</option>
+          <option value="Detective">Detective</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Action">Action</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Drama">Drama</option>
+          <option value="Horror">Horror</option>
+        </select>
+      </div>
+      <div class="added-library-container">
+        <ul class="added-library-list">
+          <!-- Movies will be dynamically added here -->
+        </ul>
+        <button title="btn" class="load-more-btn" style="display: none">
+          <span>Load More</span>
+        </button>
+      </div>
+    </section>
+
+    <div class="empty-library">
+      <i class="fas fa-film empty-library-icon"></i>
+      <h2>Kütüphaneniz Boş</h2>
+      <p>
+        Henüz kütüphanenize film eklemediniz. Başlamak için harika filmler
+        keşfedin!
+      </p>
+      <a href="catalog.html" class="browse-movies-btn">
+        <i class="fas fa-search"></i>
+        Filmleri Keşfet
+      </a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <div class="copyright">
+          <span>&copy;</span>
+          <span>2025</span>
+        </div>
+        <span class="separator">|</span>
+        <span>All Rights Reserved</span>
+      </div>
+    </footer>
+
+    <div id="videoModal" class="modal">
+      <div class="modal-content">
+        <button title="btn" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <iframe title="frame" id="videoFrame" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+
+    <div id="errorModal" class="modal">
+      <div class="modal-content">
+        <button title="btn" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+        <div class="error-message"></div>
+      </div>
+    </div>
+
+    <div id="movieDetailsModal" class="modal">
+      <div class="modal-content">
+        <button title="btn" class="modal-close-btn">
+          <i class="fas fa-times"></i>
+        </button>
+
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        if (typeof initTheme === 'function') {
+          initTheme();
+        }
+      });
+    </script>
+    <script type="module" src="js/library.js"></script>
+  </body>
+</html>
